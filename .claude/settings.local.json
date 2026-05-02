@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pio run *)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(xargs grep *)",
+      "Bash(where gh *)",
+      "PowerShell([System.Environment]::SetEnvironmentVariable\\(\"PATH\", $env:PATH + \";C:\\\\Program Files\\\\GitHub CLI\", [System.EnvironmentVariableTarget]::User\\))"
+    ]
+  }
+}
