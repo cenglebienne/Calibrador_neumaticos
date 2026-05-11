@@ -5,7 +5,22 @@
       "Bash(echo \"EXIT:$?\")",
       "Bash(xargs grep *)",
       "Bash(where gh *)",
-      "PowerShell([System.Environment]::SetEnvironmentVariable\\(\"PATH\", $env:PATH + \";C:\\\\Program Files\\\\GitHub CLI\", [System.EnvironmentVariableTarget]::User\\))"
+      "PowerShell([System.Environment]::SetEnvironmentVariable\\(\"PATH\", $env:PATH + \";C:\\\\Program Files\\\\GitHub CLI\", [System.EnvironmentVariableTarget]::User\\))",
+      "PowerShell(Get-ChildItem \"c:\\\\Backup Local\\\\Portfolio\\\\Expendedora_Agua\\\\data\" | ForEach-Object { $_.Name })",
+      "PowerShell(Get-ChildItem \"c:\\\\Backup Local\\\\Portfolio\\\\Expendedora_Agua\\\\data\" -Recurse | Where-Object { $_.PSIsContainer -eq $false } | Select-Object FullName)",
+      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\data\\\\js\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\data\\\\css\")",
+      "Bash(Out-File -Encoding utf8 -NoNewline \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\data\\\\versionfilesystem.txt\")",
+      "Bash(New-Item -Force \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\data\\\\log_actual.txt\")",
+      "Bash(Write-Host \"OK\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\data\\\\js\")",
+      "PowerShell(New-Item -ItemType Directory -Force \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\data\\\\css\")",
+      "PowerShell(New-Item -Path \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\data\\\\index.html\" -ItemType File -Force)",
+      "PowerShell(New-Item -Path \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\data\\\\js\\\\script.js\" -ItemType File -Force)",
+      "Bash(Get-ChildItem -Path \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\" -Recurse -Force)",
+      "Bash(Select-Object FullName)",
+      "Bash(Sort-Object FullName)"
     ]
   }
 }
