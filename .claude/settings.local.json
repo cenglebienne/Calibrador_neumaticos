@@ -20,7 +20,14 @@
       "PowerShell(New-Item -Path \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\data\\\\js\\\\script.js\" -ItemType File -Force)",
       "Bash(Get-ChildItem -Path \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\" -Recurse -Force)",
       "Bash(Select-Object FullName)",
-      "Bash(Sort-Object FullName)"
+      "Bash(Sort-Object FullName)",
+      "Bash(New-Item -ItemType Directory -Force \"c:\\\\Backup Local\\\\Portfolio\\\\Interface\\\\test_pulso\")",
+      "Bash(Write-Host \"ok\")",
+      "Bash(not exist *)",
+      "Bash(mkdir -p \"c:/Backup Local/Portfolio/Interface/test_captura\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Backup Local\\Portfolio\\Interface"
     ]
   }
 }
