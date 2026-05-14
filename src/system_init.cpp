@@ -21,7 +21,7 @@ void system_init_pins() {
     pinMode(Valvula_Inflado, OUTPUT);
     pinMode(Valvula_Desinflado, OUTPUT);
     pinMode(Pin_Buzzer, OUTPUT);
-    pinMode(pin_habilitacion, OUTPUT);
+    pinMode(PIN_HABILITACION, OUTPUT);
 
     // Configurar pines de entrada
     pinMode(BUSY_PIN, INPUT_PULLUP);
@@ -32,7 +32,7 @@ void system_init_pins() {
     // pinMode(Pin_Pulsador_2, INPUT);
 
     // Estados iniciales
-    digitalWrite(pin_habilitacion, LOW);
+    digitalWrite(PIN_HABILITACION, LOW);
 }
 
 void system_init_filesystem() {

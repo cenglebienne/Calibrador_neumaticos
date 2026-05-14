@@ -38,7 +38,7 @@ bool g_inTest = false;
 void menu_cerrar() {
   estado_menu = MENU_INACTIVO;
   g_pagoQrDisponible = true; // Volvemos a habilitar ventas
-  digitalWrite(pin_habilitacion, HIGH);
+  digitalWrite(PIN_HABILITACION, HIGH);
   digitalWrite(Valvula_Inflado, LOW); // Seguridad: Cortar agua si quedó abierta
   digitalWrite(Valvula_Desinflado, LOW); // Seguridad: Cortar agua si quedó abierta
   clearLCD();
@@ -158,7 +158,7 @@ void menu_loop() {
           mostrando_pulso = false;
           clearLCD();
           displayCenteredMessage("MODO PRUEBA", 0);
-          digitalWrite(pin_habilitacion, LOW);
+          digitalWrite(PIN_HABILITACION, LOW);
         //  temperatura_set_intervalo(TIEMPO_ENTRE_LECTURAS_PRUEBA);
         }
       } else {
@@ -226,7 +226,7 @@ void menu_loop() {
           clearLCD();
           displayMessage("PRECIO:", 0, 0);
           displayMessage("TIEMPO:", 0, 1);
-          digitalWrite(pin_habilitacion, LOW);
+          digitalWrite(PIN_HABILITACION, LOW);
         }
       } else {
         if (sub_estado == 1) {
@@ -271,7 +271,7 @@ void menu_loop() {
             Save_Flash_ValorServicio();
             t_aux = now;
             sub_estado = 3;
-            digitalWrite(pin_habilitacion, HIGH);
+            digitalWrite(PIN_HABILITACION, HIGH);
           }
         
         if (sub_estado == 3) {

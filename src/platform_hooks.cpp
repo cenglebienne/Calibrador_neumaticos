@@ -16,7 +16,7 @@ void plat_pins_init() {
     pinMode(Valvula_Inflado, OUTPUT);
     pinMode(Valvula_Desinflado, OUTPUT);
     pinMode(Pin_Buzzer, OUTPUT);
-    pinMode(pin_habilitacion, OUTPUT);
+    pinMode(PIN_HABILITACION, OUTPUT);
     pinMode(BUSY_PIN, INPUT_PULLUP); // Configurar el pin BUSY como entrada
     pinMode(Puls_prog, INPUT);
     pinMode(Pin_Sensor, INPUT);

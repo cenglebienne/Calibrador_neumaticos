@@ -190,7 +190,7 @@ void subprog1()
 {
 
   Primer_LoopOut = true;
-  digitalWrite(pin_habilitacion, HIGH);
+  digitalWrite(PIN_HABILITACION, HIGH);
 
   if (Primer_Loop)
   {
@@ -312,7 +312,7 @@ void subprog2()
 
   if ((digitalRead(Pin_Pulsador_1) == HIGH) && (digitalRead(Pin_Pulsador_2) == HIGH))
     Mostrar_Programa(numprograma);
-  digitalWrite(pin_habilitacion, LOW);
+  digitalWrite(PIN_HABILITACION, LOW);
 
   if (Primer_Loop)
   {
@@ -499,7 +499,7 @@ void subprog2()
 void subprog3()
 {
   static bool P1, P2;
-  digitalWrite(pin_habilitacion, HIGH);
+  digitalWrite(PIN_HABILITACION, HIGH);
 
   if (Primer_Loop)
   {
@@ -592,7 +592,7 @@ void subprog4()
 {
   static bool P1, P2;
 
-    digitalWrite(pin_habilitacion, LOW);
+    digitalWrite(PIN_HABILITACION, LOW);
 
     if (Primer_Loop)
     {
@@ -694,7 +694,7 @@ void subprog4()
 void subprog5()
 {
   static bool P1, P2;
-  digitalWrite(pin_habilitacion, HIGH);
+  digitalWrite(PIN_HABILITACION, HIGH);
 
   if (Primer_Loop)
   {
@@ -744,7 +744,7 @@ void subprog6()
   static bool P1, P2;
   static bool primeraEntrada = true;
 
-  digitalWrite(pin_habilitacion, HIGH);
+  digitalWrite(PIN_HABILITACION, HIGH);
 
   if (Primer_Loop)
   {
@@ -820,7 +820,7 @@ void subprog6()
 void subprog7()
 {
   static bool P1, P2;
-  digitalWrite(pin_habilitacion, HIGH);
+  digitalWrite(PIN_HABILITACION, HIGH);
 
   if (Primer_LoopOut)
   {

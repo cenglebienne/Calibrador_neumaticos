@@ -65,7 +65,7 @@ void setup()
     pinMode(Valvula_Inflado, OUTPUT);
     pinMode(Valvula_Desinflado, OUTPUT);
     pinMode(Pin_Buzzer, OUTPUT);
-    pinMode(pin_habilitacion, OUTPUT);
+    pinMode(PIN_HABILITACION, OUTPUT);
     pinMode(BUSY_PIN, INPUT_PULLUP); // Configurar el pin BUSY como entrada
     pinMode(P_Prog, INPUT);
     pinMode(Pin_Sensor, INPUT);
@@ -76,7 +76,7 @@ void setup()
 
     //  digitalWrite(Pin_Pulsador_1, HIGH);
     //  digitalWrite(Pin_Pulsador_2, HIGH);
-    digitalWrite(pin_habilitacion, LOW); // PONE EL PIN DEL HABILITACION DEL MOMEDERO POR DEFAULT EN BAJO
+    digitalWrite(PIN_HABILITACION, LOW); // PONE EL PIN DEL HABILITACION DEL MOMEDERO POR DEFAULT EN BAJO
 
     attachInterrupt(digitalPinToInterrupt(pin_moneda), buttonPinInterrupt, CHANGE);
 
@@ -548,13 +548,13 @@ void loop()
         if ((Misvalores.Servicio_Gratis) && (!Misvalores.Version_YPF))
         {
             g_pago_qr_disponible = false; // en servicio gratis deshabilito el pago electronico
-            digitalWrite(pin_habilitacion, HIGH);
+            digitalWrite(PIN_HABILITACION, HIGH);
             Blink();
         }
         else
         {
             g_pago_qr_disponible = true;
-            digitalWrite(pin_habilitacion, LOW);
+            digitalWrite(PIN_HABILITACION, LOW);
             if ((millis() - g_Tiempo_Ultimo_Refresco) > TIEMPO_REFRESCO_7SEG)
                 Mostrar_Rayita();
         }
@@ -582,7 +582,7 @@ void loop()
             buzzerCorto();
             if (g_cospel_in)
                 logEvent("Ingresó ficha");
-            // digitalWrite(pin_habilitacion, HIGH);
+            // digitalWrite(PIN_HABILITACION, HIGH);
 
             // g_pago_qr_disponible = false; // deshabilito el pago online mientras está dando servicio
             IncrementoMiscontadores();

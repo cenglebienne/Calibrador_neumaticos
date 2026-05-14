@@ -101,7 +101,7 @@ void maquina_vending_loop()
     if (Misvalores.Servicio_Gratis)
     {
       g_pagoQrDisponible = false;
-      digitalWrite(pin_habilitacion, HIGH);
+      digitalWrite(PIN_HABILITACION, HIGH);
 
       if (forzar_refresco_msj)
       {
@@ -117,7 +117,7 @@ void maquina_vending_loop()
 
     //  MODO NORMAL: Habilitar monedero
     g_pagoQrDisponible = true;
-    digitalWrite(pin_habilitacion, LOW);
+    digitalWrite(PIN_HABILITACION, LOW);
 
     // --- INICIO CARROUSEL DE MENSAJES ---
     uint32_t tiempo_mostrar = 0;
